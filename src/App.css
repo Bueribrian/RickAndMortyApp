@@ -1,0 +1,207 @@
+:root{
+  --black:#211a1d;
+  --purple-dark:#6320ee;
+  --purple-light:#8075ff;
+  --light:#fdf9ff;
+  --cream:#cad5ca;
+}
+body,html{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.navbar-app{
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+}
+.banner-app{
+  width: 100%;
+  height: 50vh;
+  background-image: url('https://images.alphacoders.com/641/641547.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 3;
+}
+.wrapper-bn{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-content{
+  text-align: center;
+}
+.banner-content .title{
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.subtitle{
+  line-height: 80px;
+}
+.banner-content p{
+  line-height: 10px;
+}
+.banner-content p:nth-last-child(2) {
+  margin-bottom: 30px;
+}
+header{
+  color: #fff;
+}
+.btn-banner{
+  padding: 1rem 2rem;
+  background: #fff;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.main-app{
+  display: grid;
+  grid-template-areas: 'panel body'
+                        'panel body' ;
+  grid-template-columns: 200px 5fr;     
+  grid-template-rows: auto auto auto;          
+}
+
+@media screen and (max-width: 720px){
+  .main-app{
+    display: grid;
+    grid-template-areas: 'panel '
+                          'body' ;
+    grid-template-columns: 1fr;     
+    grid-template-rows: auto auto auto;          
+  }
+  .banner-content {
+    text-align: center;
+    font-size: .9rem;
+    padding: 1rem;
+  }
+  .subtitle{
+    
+  }
+
+  .banner-content .title{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+.panel-app{
+ grid-area: 'panel';
+ overflow: hidden;
+ background: orange;
+ padding: 1rem;
+ box-shadow: inset -4px 0px 9px -3px rgba(156,156,156,1);
+ box-sizing: border-box;
+}
+.panel-app ul{
+  list-style: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background: #fff;
+}
+.panel-app ul li{
+  margin: 1rem 0;
+  padding: 1rem 0;
+  cursor: pointer;
+  transition: .3s  ease-in-out;
+}
+.panel-app ul li:hover{
+  text-decoration: underline;
+  transition: .3s  ease-in-out;
+
+}
+.body-app{
+  grid-area: 'body';
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.footer-app{
+  display:flex;
+  justify-content:center;
+  width: 100%;
+  margin: 2rem 0;
+
+}
+.footer-app button{
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+.cards-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 400px));
+  grid-auto-rows: auto;
+  grid-gap: 15px;
+  justify-content: center;
+}
+.card{
+  width: 24rem;
+  background: #303030;
+  color: #fff;
+  font-size: .9rem;
+  box-shadow: 7px 8px 16px -11px rgba(56, 56, 56, 0.4);
+  text-align: center;
+  white-space:nowrap;
+  font-family: 'Dosis', sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+ 
+}
+
+.card-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+  background: rgb(250, 250, 250);
+  color:black;
+  font-weight: bolder;
+  
+}
+
+.card-image{
+  width: 100%;
+
+}
+.card-image img{
+  width: 100%;
+  object-fit: cover;
+}
+.card-body{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-body > *{
+  margin: 0 .6rem;
+}
+.card-footer{
+  width: 100%;
+  background: rgb(233, 233, 233);
+  color: black;
+}
+.span-bolder{
+  font-weight: bolder;
+}
+
+a{
+  color:orange;
+}
